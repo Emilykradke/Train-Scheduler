@@ -4,11 +4,56 @@
     <title>Train Scheduler</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/CSS/style.css">
     <script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
 </head>
 <body>
-
-
+    <div class="col-md-12">
+            <div class="jumbotron">
+                <h1 class="header">Ride the Railroad</h1>
+                <h3>Choo Choo. Chee Chee</h3>
+            </div>
+    </div>
+    <div class="col-md-12">
+        <div class="title">Current Train Schedule</div>
+        <table class="table">
+            <thead>  
+                <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-12">
+        <div class="title">Add Train</div>
+        <form>
+            <div class="form-group">
+                <label for="trainName">Train Name</label>
+                <input type="Name" class="form-control" id="trainName" aria-describedby="Name">
+            </div>
+            <div class="form-group">
+                <label for="Destination">Destination</label>
+                <input type="destination" class="form-control" id="destination">
+            </div>
+            <div class="form-group">
+                <label for="FirstTrain">First train Time (HH:mm - military time)</label>
+                <input type="firstTrain" class="form-control" id="firstTrain" aria-describedby="StartDate">
+            </div>
+            <div class="form-group">
+                    <label for="frequency">Frequency (minutes)</label>
+                    <input type="frequency" class="form-control" id="frequency" aria-describedby="frequency">
+                </div>
+            <button type="submit" class="btn btn-primary" id="submitInfo">Submit</button>
+        </form>
+    </div>
+        
 
     <script src="assets/JavaScript/train.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
